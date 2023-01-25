@@ -11,7 +11,8 @@ Successful login in the ER App
     Wait Until Element Contains    class:title    Enter code
     Input Text    xpath://*[@id="root"]/div[1]/div[1]/div[2]/form/div/input    2222
     Click Element    xpath://*[@id="root"]/div[1]/div[1]/div[2]/form/button[1]
-    Set Browser Implicit Wait    5 Seconds
+    Set Browser Implicit Wait    10 Seconds
+    Element Should Contain    class:header    Overview
     Close Browser
 Failed login in the ER app
     Comment    Failed login in the Web App as ER
@@ -23,4 +24,5 @@ Failed login in the ER app
     Input Text    xpath://*[@id="root"]/div[1]/div[1]/div[2]/form/div/input    2345
     Click Element    xpath://*[@id="root"]/div[1]/div[1]/div[2]/form/button[1]
     Wait Until Element Contains    class:error-message    Invalid code
+    Element Should Contain    class:error-message    Invalid code
     Close Browser
